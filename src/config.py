@@ -16,10 +16,10 @@ AZURE_API_VERSION = "2024-10-01-preview"
 # Databricks Configuration (only needed if USE_LOCAL_CSV=False)
 DATABRICKS_HOST = os.getenv("DATABRICKS_HOST")
 DATABRICKS_TOKEN = os.getenv("DATABRICKS_TOKEN")
-DATABRICKS_WAREHOUSE_ID = os.getenv("DATABRICKS_WAREHOUSE_ID")
+DATABRICKS_WAREHOUSE_ID = os.getenv("DATABRICKS_WAREHOUSE_ID") or os.getenv("DATABRICKS_SQL_WAREHOUSE_ID")
 DATABRICKS_CATALOG = os.getenv("DATABRICKS_CATALOG", "main")
 DATABRICKS_SCHEMA = os.getenv("DATABRICKS_SCHEMA", "default")
-DATABRICKS_HTTP_PATH = os.getenv("DATABRICKS_HTTP_PATH")
+DATABRICKS_HTTP_PATH = os.getenv("DATABRICKS_HTTP_PATH") or os.getenv("DATABRICKS_SQL_ENDPOINT")
 # Whether the app is allowed to create catalogs/schemas/tables in Databricks.
 # Default: False (safer). Set to "True" in `.env` to allow schema creation attempts.
 DATABRICKS_ALLOW_SCHEMA_CREATE = os.getenv("DATABRICKS_ALLOW_SCHEMA_CREATE", "False").lower() == "true"

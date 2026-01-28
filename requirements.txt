@@ -11,3 +11,5 @@ databricks-sql-connector
 requests
 cryptography
 plotly
+altair>=4.2
+

@@ -1,4 +1,4 @@
-"""Main Streamlit application for AI Coach - Simplified Chatbot Interface."""
+"""Main Streamlit application for SkillBridge - Career Coaching with Data Exploration."""
 import streamlit as st
 import pandas as pd
 from src.auth import AuthenticationManager
@@ -8,6 +8,11 @@ from src.mock_llm_client import MockLLMClient
 from src.databricks_client import DatabricksClient
 from src.databricks_sql import DatabricksSQLClient
 from src.utils import calculate_skill_match_percentage
+from src.catalog_explorer_ui import (
+    render_catalog_explorer,
+    render_data_preview,
+    render_charts,
+)
 
 
 def setup_page_config():
@@ -297,6 +302,39 @@ def render_mentor_dashboard():
             st.error(f"Error loading connections: {str(e)}")
     else:
         st.info("Active connections will appear here once you accept a request.")
+    
+    st.divider()
+    
+    # Add Catalog Explorer Tab
+    st.subheader("📊 Data Insights & Catalog Explorer")
+    
+    with st.expander("🔍 Explore Databricks Catalog", expanded=False):
+        try:
+            catalog, schema, table, df = render_catalog_explorer("main")
+            
+            if catalog and schema and table and df is not None:
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("📁 Catalog", catalog)
+                with col2:
+                    st.metric("📋 Schema", schema)
+                with col3:
+                    st.metric("📊 Table", table)
+                
+                st.divider()
+                
+                tab1, tab2 = st.tabs(["📋 Data Preview", "📈 Visualization"])
+                
+                with tab1:
+                    st.write(f"**Rows:** {len(df)} | **Columns:** {len(df.columns)}")
+                    st.dataframe(df, use_container_width=True)
+                
+                with tab2:
+                    render_charts(df, "mentor_explorer")
+            else:
+                st.info("Select a catalog, schema, and table from the sidebar to explore data")
+        except Exception as e:
+            st.warning(f"Catalog exploration not available: {e}")
 
 
 def get_job_recommendations(mentee_profile: dict, jobs_df: pd.DataFrame) -> pd.DataFrame:
@@ -706,8 +744,39 @@ Note: Demo mode is currently active with mock responses.
         
         except Exception as e:
             st.error(f"Error loading recommendations: {str(e)}")
-
-
+    
+    # Add Catalog Explorer for Mentee
+    st.divider()
+    st.subheader("📊 Explore Job Market Data & Insights")
+    
+    with st.expander("🔍 Databricks Catalog Explorer", expanded=False):
+        st.write("Browse and visualize job market data, skills trending, and mentor information from the Databricks catalog.")
+        try:
+            catalog, schema, table, df = render_catalog_explorer("main")
+            
+            if catalog and schema and table and df is not None:
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("📁 Catalog", catalog)
+                with col2:
+                    st.metric("📋 Schema", schema)
+                with col3:
+                    st.metric("📊 Table", table)
+                
+                st.divider()
+                
+                tab1, tab2 = st.tabs(["📋 Data Preview", "📈 Visualization"])
+                
+                with tab1:
+                    st.write(f"**Rows:** {len(df)} | **Columns:** {len(df.columns)}")
+                    st.dataframe(df, use_container_width=True)
+                
+                with tab2:
+                    render_charts(df, "mentee_explorer")
+            else:
+                st.info("Select a catalog, schema, and table from the sidebar to explore market data")
+        except Exception as e:
+            st.warning(f"Catalog exploration not available: {e}")
 
 
 def render_notifications_ui():
