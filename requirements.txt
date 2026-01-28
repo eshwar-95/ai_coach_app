@@ -1,0 +1,13 @@
+streamlit
+python-dotenv
+pandas
+numpy
+azure-identity
+azure-ai-inference
+openai
+python-docx
+PyPDF2
+databricks-sql-connector
+requests
+cryptography
+plotly

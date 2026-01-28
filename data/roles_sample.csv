@@ -1,0 +1,4 @@
+name,username,email,password,role
+John Mentor,john_mentor,john@mentor.com,password,mentor
+Jane Mentee,jane_mentee,jane@mentee.com,password,mentee
+Alice Mentee,alice_mentee,alice@company.com,password,mentee

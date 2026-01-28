@@ -1,0 +1,13 @@
+title,company,description,required_skills,experience_level,location,salary,job_url
+Senior Data Scientist,TechCorp,Lead machine learning initiatives and build scalable ML pipelines,"Python, Machine Learning, TensorFlow, AWS, SQL, Statistics",senior,San Francisco CA,150000-200000,https://example.com/job1
+Full Stack Developer,StartupXYZ,Build web applications using modern tech stack,"JavaScript, React, Node.js, MongoDB, Docker",mid-level,Remote,90000-130000,https://example.com/job2
+Cloud Architect,CloudSys Inc,Design and implement cloud infrastructure solutions,"AWS, Azure, Kubernetes, DevOps, CI/CD",senior,New York NY,140000-190000,https://example.com/job3
+Junior Python Developer,CodeWorks,Develop backend services and APIs,"Python, Django, PostgreSQL, Git",entry-level,Austin TX,60000-85000,https://example.com/job4
+Data Analyst,Analytics Pro,Analyze business data and create dashboards,"SQL, Python, Tableau, Excel, Statistics",mid-level,Boston MA,80000-110000,https://example.com/job5
+DevOps Engineer,InfraScale,Manage infrastructure and deployment pipelines,"Docker, Kubernetes, AWS, Linux, Terraform, Python",mid-level,Seattle WA,110000-150000,https://example.com/job6
+Frontend Developer,DesignStudio,Create responsive user interfaces,"React, JavaScript, CSS, HTML, Figma",junior,Los Angeles CA,70000-100000,https://example.com/job7
+Solutions Architect,EnterpriseSoft,Architect enterprise solutions for clients,"Java, Spring Boot, Microservices, AWS, System Design",senior,Chicago IL,130000-180000,https://example.com/job8
+Data Engineer,BigDataCo,Build data pipelines and ETL processes,"Python, Spark, Hadoop, SQL, Kafka, AWS",mid-level,San Jose CA,100000-140000,https://example.com/job9
+QA Automation Engineer,TestQuality,Develop automated testing frameworks,"Python, Selenium, Jest, CI/CD, SQL",junior,Denver CO,65000-90000,https://example.com/job10
+Machine Learning Engineer,AIStartup,Develop and deploy ML models at scale,"Python, TensorFlow, PyTorch, SQL, AWS, MLOps",senior,Mountain View CA,160000-210000,https://example.com/job11
+Backend Developer,WebServices,Build scalable backend services,"Python, Django, PostgreSQL, Docker, Redis",mid-level,Portland OR,85000-120000,https://example.com/job12

@@ -1,0 +1,13 @@
+[logger]
+level = "info"
+messageFormat = "%(asctime)s - %(levelname)s - %(message)s"
+
+[client]
+showErrorDetails = true
+
+[browser]
+gatherUsageStats = false
+
+[server]
+runOnSave = true
+headless = true

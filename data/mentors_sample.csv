@@ -1,0 +1,6 @@
+name,username,email,password,expertise,experience_years,bio
+John Mentor,john_mentor,john@mentor.com,pwd,Data Science & ML,8,"Passionate about machine learning and mentoring junior data scientists. Specialize in Python, TensorFlow, and AWS."
+Sarah Chen,sarah_chen,sarah@company.com,pwd,Web Development & React,6,"Full-stack developer with expertise in React, Node.js, and cloud deployment. Love teaching modern web technologies."
+Michael Rodriguez,michael_rodriguez,michael@techcorp.com,pwd,Cloud Architecture,10,"AWS and Azure expert with 10+ years experience. Help mentees design scalable cloud infrastructure."
+Emily Watson,emily_watson,emily@designstudio.com,pwd,Frontend Development,5,"UI/UX focused frontend developer. Specialize in React, CSS, and responsive design patterns."
+David Park,david_park,david@infrastructure.com,pwd,DevOps & Infrastructure,7,"Kubernetes and Docker expert. Help mentees build robust deployment pipelines and cloud infrastructure."

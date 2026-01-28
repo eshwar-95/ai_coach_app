@@ -1,0 +1,99 @@
+# 🎯 NEXT STEPS (READ THIS FIRST!)
+
+## Current Status: ✅ 95% DONE
+
+Your app is ready. Only ONE configuration step remains.
+
+---
+
+## What To Do NOW (Choose ONE Option)
+
+### 🎯 OPTION A: Databricks LLM (5 min)
+
+```
+Step 1: Visit https://databricks.com and log in
+
+Step 2: Click your username → Account Settings → Developer
+        Click "Generate new token"
+        Copy the token (starts with "dapi")
+
+Step 3: In Databricks, go to "Serving Endpoints"
+        Find endpoint name (e.g., "databricks-claude-sonnet-4-5")
+        Copy the "API URL" (like: https://xyz.cloud.databricks.com/serving-endpoints/...)
+
+Step 4: Open ".env" file in this project
+        Add these two lines:
+        DATABRICKS_TOKEN=dapi...
+        DATABRICKS_LLM_ENDPOINT=https://...
+
+Step 5: Save the file
+
+Step 6: Restart the app and test!
+```
+
+### 🎯 OPTION B: Azure OpenAI (3 min)
+
+```
+Step 1: Visit https://portal.azure.com
+
+Step 2: Find your OpenAI resource
+        Click "Keys and Endpoints"
+        Copy "Endpoint" URL
+        Copy one of the API Keys
+
+Step 3: Open ".env" file in this project
+        Add these two lines:
+        AZURE_ENDPOINT=https://...
+        AZURE_API_KEY=...
+
+Step 4: Save the file
+
+Step 5: Restart the app and test!
+```
+
+---
+
+## Running the App
+
+```powershell
+# Activate virtual environment
+. .\venv\Scripts\Activate.ps1
+
+# Run the app
+streamlit run app.py
+
+# Opens at: http://localhost:8501
+```
+
+---
+
+## Login & Test
+
+```
+Email: jane@mentee.com
+Password: password
+```
+
+Complete the 5-step chatbot and check results:
+- Job recommendations ✅ (works immediately)
+- Mentor suggestions ✅ (works immediately)
+- Upskilling plan ✨ (now works with LLM configured!)
+
+---
+
+## That's It!
+
+Pick Databricks or Azure → Add credentials → Restart → Done!
+
+Need help? Run: `python verify_setup.py`
+
+---
+
+## Guides
+
+- **This file** - Quick next steps
+- **QUICK_SETUP.md** - Detailed setup guide
+- **SETUP_COMPLETE.md** - Comprehensive guide
+- **QUICK_REF.md** - Reference card
+
+Good luck! 🚀
